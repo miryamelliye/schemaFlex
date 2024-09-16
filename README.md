@@ -7,14 +7,12 @@ This project is a backend system designed to allow users to dynamically manage d
 ## Features
 
 ### Schema Management
-
-- **Create, update, and delete tables and fields**: Users can dynamically define tables and fields, update the schema by adding new fields, and delete tables entirely.
-- Example: Create a `Customer` table with fields like `name`, `email`, and `created_at`.
-- Update the schema by adding a `phone_number` field to the existing `Customer` table.
+- **User Interface Assumptions**: In this project, I assumed that the user interface would follow a step-by-step approach for schema management. Specifically, we designed the API with the assumption that: Users would first create tables before adding fields. This aligns with a typical workflow where a table structure is defined before specifying its individual components. Once a table is created, users would then proceed to add fields one by one. This sequential approach allows for a clear and organized way of defining the schema.
+- **How it works**: When a table is created, the create_table function is invoked. This function dynamically generates the model for the table and creates it in the database using Django's schema_editor. When a field is created, the update_table_schema function is called. This function updates the existing table schema by adding the new field. It ensures that the schema in the database is consistent with the user-defined schema. This implementation focuses on dynamically managing schemas, allowing users to flexibly define and modify their database structure.
 
 ### CRUD Operations with Search
 
-- **Perform CRUD (Create, Read, Update, Delete) operations** on dynamically generated tables.
+- **Perform CRUD (Create, Read, Update, Delete) operations** on dynamically generated tables by mentionning the table id in URL.
 - **Search functionality**: The read operation supports filtering data with exact or partial matches on any field. Results are paginated, and sorting options are available for large data sets.
 
 ### Data Import

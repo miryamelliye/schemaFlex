@@ -2,7 +2,6 @@
 
 **Note**: Due to time constraints, the project was implemented with a focus on dynamic schema management. As a result, JWT authentication was not included in this implementation, despite being used in my previous projects. The primary emphasis was on the dynamic aspects of the system.
 
-This project is a backend system designed to allow users to dynamically manage data schemas, perform CRUD operations, and handle large data imports efficiently. The system provides secure, flexible APIs for schema management, data operations, and user notifications, ensuring scalability and robustness.
 
 ## Features
 

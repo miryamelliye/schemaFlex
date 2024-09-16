@@ -1,5 +1,7 @@
 # Data Management System
 
+**Note**: Due to time constraints, the project was implemented with a focus on dynamic schema management. As a result, JWT authentication was not included in this implementation, despite being used in my previous projects. The primary emphasis was on the dynamic aspects of the system.
+
 This project is a backend system designed to allow users to dynamically manage data schemas, perform CRUD operations, and handle large data imports efficiently. The system provides secure, flexible APIs for schema management, data operations, and user notifications, ensuring scalability and robustness.
 
 ## Features
@@ -21,13 +23,10 @@ This project is a backend system designed to allow users to dynamically manage d
 - **Asynchronous processing**: Large imports are handled using Celery to process the data efficiently in the background.
 - **CSV Import Example**: Import customer data into the `Customer` table, ensuring email uniqueness and required fields validation.
 
-### Email Notifications
+### Email Notifications (CELERY TASK)
 
 - Upon successful import completion, users receive an email confirmation using an integrated email service.
 
-### Security
-
-- **JWT token-based authentication**: Secure all API endpoints using JWT authentication, ensuring that only authorized users can perform actions.
 
 ## Dockerization
 
